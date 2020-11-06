@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Title Page</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            body{
+                width: 1200px;
+                margin:0 auto;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="text-center">Hello World</h1>
+       <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+           <div class="thumbnail">
+               <img data-src="#" alt="">
+               <div class="caption">
+                   <form method="POST" action="/add">
+                        <h3>Iphone 111</h3>
+                        <img style="width: 200px; height: 200px;" src="https://cdn.tgdd.vn/Products/Images/42/219208/vsmart-joy-3-4gb-den-400x460-400x460.png" alt="">
+                        <input type="hidden" name="ten" value="iphone1">
+                        <input type="hidden" name="dongia" value="1200">
+                        <input type="hidden" name="id" value="1">
+                        <div class="form-group">
+                                <input  name="soluong" id="input" type="number" class="form-control" value="" required="required" title="">
+                        </div>
+                        
+                        
+                        <button href="#" class="btn btn-success" type="submit">Them Vao Gio</button>
+                   
+                  </form>
+               </div>
+           </div>
+       </div>
+       <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <div class="thumbnail">
+            <img data-src="#" alt="">
+            <div class="caption">
+                <form method="POST" action="/add">
+                    <h3>Iphone 111</h3>
+                    <img style="width: 200px; height: 200px;" src="https://cdn.tgdd.vn/Products/Images/42/219208/vsmart-joy-3-4gb-den-400x460-400x460.png" alt="">
+                    <input type="hidden" name="ten" value="iphone2">
+                    <input type="hidden" name="dongia" value="1300">
+                    <input type="hidden" name="id" value="2">
+                    <div class="form-group">
+                            <input  name="soluong" id="input" type="number" class="form-control" value="" required="required" title="">
+                    </div>
+                    
+                    
+                    <button href="#" class="btn btn-success" type="submit">Them Vao Gio</button>
+               
+              </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <div class="thumbnail">
+            <img data-src="#" alt="">
+            <div class="caption">
+                <form method="POST" action="/add">
+                    <h3>Iphone 111</h3>
+                    <img style="width: 200px; height: 200px;" src="https://cdn.tgdd.vn/Products/Images/42/219208/vsmart-joy-3-4gb-den-400x460-400x460.png" alt="">
+                    <input type="hidden" name="ten" value="iphone3">
+                    <input type="hidden" name="dongia" value="1500">
+                    <input type="hidden" name="id" value="3">
+                    <div class="form-group">
+                            <input  name="soluong" id="input" type="number" class="form-control" value="" required="required" title="">
+                    </div>
+                    
+                    
+                    <button href="#" class="btn btn-success" type="submit">Them Vao Gio</button>
+               
+              </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <div class="thumbnail">
+            <img data-src="#" alt="">
+            <div class="caption">
+                <form method="POST" action="/add">
+                    <h3>Iphone 111</h3>
+                    <img style="width: 200px; height: 200px;" src="https://cdn.tgdd.vn/Products/Images/42/219208/vsmart-joy-3-4gb-den-400x460-400x460.png" alt="">
+                    <input type="hidden" name="ten" value="iphone4">
+                    <input type="hidden" name="dongia" value="1600">
+                    <input type="hidden" name="id" value="4">
+                    <div class="form-group">
+                            <input  name="soluong" id="input" type="number" class="form-control" value="" required="required" title="">
+                    </div>
+                    
+                    
+                    <button href="#" class="btn btn-success" type="submit">Them Vao Gio</button>
+               
+              </form>
+            </div>
+        </div>
+    </div>
+        
+       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+           
+           <table class="table table-hover">
+               <thead>
+                   <tr>
+                      
+                       <th>ten</th>
+                       <th>don gia</th>
+                       <th>so luong</th>
+                       <th>thanh tien</th>
+                       <th>action</th>
+                   </tr>
+               </thead>
+               <% var tong = 0%>
+               <tbody>
+                   
+                   <h2>fawe<% list.forEach(function(current,index){%>
+                        <tr>
+                            <td><%=current.ten%></td>
+                            <td><%=current.dongia%></td>
+                            <td><%=current.soluong%></td>
+                            <td><%=current.dongia* current.soluong%></td>
+                            <%tong += current.dongia* current.soluong%>
+                            <td><a href="/delete/<%=current.id%>">Remove</a></td>
+                        </tr>
+                   <% }) %></h2>
+               </tbody>
+               <tfoot>
+                   <tr>
+                       
+                       <td colspan="3">Tong tien</td>
+                       <td><%=tong%></td>
+                   </tr>
+               </tfoot>
+           </table>
+           
+       </div>
+    
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Bootstrap JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </body>
+</html>
